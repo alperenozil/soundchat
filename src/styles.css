@@ -32,3 +32,11 @@ header a {
 .title-link {
   font-size: 16px;
 }
+
+.center-layout {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}

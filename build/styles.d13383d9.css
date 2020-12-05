@@ -1,0 +1,2 @@
+body{padding:100px 20px 0;font-family:sans-serif}a{text-decoration:none;color:#000}a:hover{text-decoration:underline}header{display:flex;justify-content:space-between;align-items:center;padding:0 20px;position:fixed;top:0;left:0;right:0;background-color:#f5f5f5}header a{padding:0 10px}.title-link,header a{font-size:16px}.center-layout{max-width:800px;margin:auto;display:flex;flex-direction:column;background-color:#f5f5f5}
+/*# sourceMappingURL=/styles.d13383d9.css.map */
