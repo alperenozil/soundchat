@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 const firebaseConfig = {
     apiKey: "AIzaSyBJzsWzIo2L9Tjp6XhgGuQGWdPVrxgaYlM",
     authDomain: "sound-chat-3d46a.firebaseapp.com",
