@@ -38,6 +38,7 @@ header a {
   margin: auto;
   padding-left: 32px;
   padding-right: 16px;
+  border-radius: 24px;
   padding-bottom: 16px;
   padding-top: 0px;
   display: flex;
@@ -49,6 +50,8 @@ header a {
   margin: auto;
   margin-bottom: 8px;
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 button {
@@ -56,6 +59,48 @@ button {
   background-color: white;
   width: 200px;
   height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  outline: none;
+  font-family: sans-serif;
+}
+
+#save-button {
+  font-size: 20px;
+  background-color: #4c8bf5;
+  width: 80px;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  outline: none;
+  font-family: sans-serif;
+}
+
+#artist-input {
+  font-size: 20px;
+  background-color: white;
+  width: 300px;
+  padding-left: 16px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  outline: none;
+  font-family: sans-serif;
+}
+
+#song-title-input {
+  font-size: 20px;
+  background-color: white;
+  width: 300px;
+  padding-left: 16px;
+  height: 40px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
