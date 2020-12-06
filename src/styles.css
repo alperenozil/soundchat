@@ -54,6 +54,19 @@ header a {
   margin-top: 10px;
 }
 
+#add-tune-form input {
+  font-size: 20px;
+  background-color: white;
+  padding-left: 16px;
+  height: 40px;
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  font-family: sans-serif;
+}
+
 button {
   font-size: 20px;
   background-color: white;
@@ -81,37 +94,16 @@ button {
   font-family: sans-serif;
 }
 
-#artist-input {
-  font-size: 20px;
-  background-color: white;
-  width: 300px;
-  padding-left: 16px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  align-items: center;
-  outline: none;
-  font-family: sans-serif;
-}
-
-#song-title-input {
-  font-size: 20px;
-  background-color: white;
-  width: 300px;
-  padding-left: 16px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  align-items: center;
-  outline: none;
-  font-family: sans-serif;
-}
-
 #appbar-signin-button,
 #appbar-signout-button,
 #appbar-addtune-button,
 #appbar-mysongs-link {
   display: none;
+}
+
+.song-container button {
+  margin-right: 16px;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
 }

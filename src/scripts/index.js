@@ -1,7 +1,7 @@
 import '../../firebase/firebaseConfiguration';
-import { assignClick, initializeSigninButtons } from './utilities';
+import { assignClick, initializeSigninButtons, addSongToMySongs } from './utilities';
 import { googleSignin, signOut, twitterSignin } from '../../firebase/firebaseAuthentication';
-import { writeSongToFirestore } from '../../firebase/firebaseRepository'
+import { writeSongToFirestore, readSongsFromFirestore} from '../../firebase/firebaseRepository'
 initializeSigninButtons();
 assignClick('signin-google', googleSignin);
 assignClick('appbar-signout-button',signOut);
@@ -14,4 +14,14 @@ if (createTuneForm) {
         const songTitle=event.target['song-title-input'].value;
         writeSongToFirestore(songArtist,songTitle);
     }
+}
+// if we are in mysongs.html this will run. we are on this page
+const mySongsComponent = document.getElementById('my-songs-component');
+if(mySongsComponent){
+    readSongsFromFirestore()
+        .then((songs)=>{
+            songs.forEach((song)=>{
+                addSongToMySongs(mySongsComponent,song);
+            });
+        });
 }
