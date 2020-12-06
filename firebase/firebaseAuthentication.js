@@ -7,6 +7,13 @@ export const googleSignin = () => {
         .catch((error)=>console.log('error on sign in with google',error));
 }
 
+export const twitterSignin = () => {
+    const provider = new firebase.auth.TwitterAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+        .then((result)=>console.log('succesfully logged',result.user.displayName))
+        .catch((error)=>console.log('error on sign in with twitter',error));
+}
+
 export const signOut = () => {
     firebase.auth().signOut()
         .then(()=>console.log('succesfully logged out'))
