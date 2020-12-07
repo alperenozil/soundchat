@@ -1,7 +1,7 @@
 import '../../firebase/firebaseConfiguration';
 import { assignClick, initializeSigninButtons, addSongToMySongs } from './utilities';
 import { googleSignin, signOut, twitterSignin } from '../../firebase/firebaseAuthentication';
-import { writeSongToFirestore, readSongsFromFirestore} from '../../firebase/firebaseRepository'
+import { writeSongToFirestore, readSongsFromFirestore, deleteSongFromFirestore} from '../../firebase/firebaseRepository'
 initializeSigninButtons();
 assignClick('signin-google', googleSignin);
 assignClick('appbar-signout-button',signOut);
@@ -24,4 +24,9 @@ if(mySongsComponent){
                 addSongToMySongs(mySongsComponent,song);
             });
         });
+}
+
+window.deleteSong=function(id){
+    deleteSongFromFirestore(id)
+    .then(()=>window.location.reload());
 }
