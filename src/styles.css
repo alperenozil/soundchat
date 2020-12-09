@@ -54,7 +54,8 @@ header a {
   margin-top: 10px;
 }
 
-#add-tune-form input {
+#add-tune-form input,
+#edit-tune-form input {
   font-size: 20px;
   background-color: white;
   padding-left: 16px;

@@ -1,7 +1,8 @@
 import '../../firebase/firebaseConfiguration';
 import { assignClick, initializeSigninButtons, addSongToMySongs } from './utilities';
 import { googleSignin, signOut, twitterSignin } from '../../firebase/firebaseAuthentication';
-import { writeSongToFirestore, readSongsFromFirestore, deleteSongFromFirestore} from '../../firebase/firebaseRepository'
+import { writeSongToFirestore, readSongsFromFirestore, 
+    deleteSongFromFirestore, getSongFromFirestore} from '../../firebase/firebaseRepository'
 initializeSigninButtons();
 assignClick('signin-google', googleSignin);
 assignClick('appbar-signout-button',signOut);
@@ -29,4 +30,16 @@ if(mySongsComponent){
 window.deleteSong=function(id){
     deleteSongFromFirestore(id)
     .then(()=>window.location.reload());
+}
+
+const editSongForm = document.getElementById('edit-tune-form'); 
+if(editSongForm){
+    const searchParams=new URLSearchParams(location.search);
+    const songId=searchParams.get('id');
+    getSongFromFirestore(songId)
+        .then((song)=>{
+            editSongForm.elements['song-id'].value=song.id;
+            editSongForm.elements['artist-input-edit'].value=song.songArtist;
+            editSongForm.elements['song-title-input-edit'].value=song.songTitle;
+        });
 }
